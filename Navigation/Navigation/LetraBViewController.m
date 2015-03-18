@@ -32,6 +32,11 @@
 
 -(void)next:(id)sender {
   // Continue com as proximas letras
+    LetraBViewController *proximo = [[LetraBViewController alloc]
+                                     initWithNibName:nil
+                                     bundle:NULL];
+    [self.navigationController pushViewController:proximo
+                                         animated:YES];
     
 }
 
