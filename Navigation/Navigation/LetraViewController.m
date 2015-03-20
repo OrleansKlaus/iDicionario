@@ -46,6 +46,10 @@ int indiceTela;
 // criando a imagem
     imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.center.x-75, self.view.center.y-025, 125, 125)];
     [self.view addSubview:imageView];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 -(void)proximaTela:(id)sender
@@ -95,4 +99,44 @@ int indiceTela;
     NSLog(@"valor: %i ", valorIndice);
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    self.view.backgroundColor = [UIColor greenColor];
+    [UIView animateWithDuration:1.0 animations:^{
+    self.view.backgroundColor = [UIColor whiteColor]; }];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+// animacao da imagem quando a tela sai
+    CGFloat selfHeight = self.view.bounds.size.height;
+    CGFloat selfWidth = self.view.bounds.size.width;
+
+    [UIView animateWithDuration:3 delay:5.0
+                        options:UIViewAnimationOptionCurveEaseIn animations:^{
+                            [imageView setAlpha:1];
+                        } completion:^(BOOL finished){
+
+
+// animacao da letra
+    [UIView animateWithDuration:0.4 delay:0.3 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        letraLabel.transform = CGAffineTransformMakeTranslation(0, selfHeight/2 - 90);
+        } completion:^(BOOL finished){
+            [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{ letraLabel.transform = CGAffineTransformMakeTranslation(0, selfHeight/2 -120);} completion:^(BOOL finished) {
+                [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                    letraLabel.transform = CGAffineTransformMakeTranslation(0, selfHeight/2 - 90);
+                    } completion:^(BOOL finished) {
+                        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{ letraLabel.transform = CGAffineTransformMakeTranslation(0, selfHeight/2 -100);} completion:^(BOOL finished) {
+                            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                                letraLabel.transform = CGAffineTransformMakeTranslation(0, selfHeight/2 - 90);
+                                 } completion:^(BOOL finished) {
+                                    }];
+                            }];
+                        }];
+                }];
+        }];
+        }];
+}
+
+     
 @end
