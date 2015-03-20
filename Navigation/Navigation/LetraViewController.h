@@ -13,7 +13,18 @@
 -(int) indiceTela;
 +(void) setIndiceTela:(int)valorIndice;
 
+
+@property UILabel *letraLabel;
+@property UIImageView *imageView;
+
 @property LetraViewController *telaSucessora;
 @property LetraViewController *telaPredecessora;
+@property UITabBar *tabBar;
+
+-(void)disparouTap:(UITapGestureRecognizer*)tap;
+-(void)disparouPan:(UIPanGestureRecognizer*)pan;
+-(void)disparouSwipe:(UISwipeGestureRecognizer*)swipe;
+
+//- (IBAction)swipeViewzona:(UISwipeGestureRecognizer *)sender;
 
 @end

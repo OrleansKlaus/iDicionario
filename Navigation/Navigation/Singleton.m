@@ -6,9 +6,19 @@
 //  Copyright (c) 2015 Vinicius Miana. All rights reserved.
 //
 
-#import "Palavras.h"
+#import "Singleton.h"
 
-@implementation Palavras
+@implementation Singleton
+
+static Singleton *instancia;
+
++(Singleton *) instance{
+    if(instancia==nil)
+    {
+        instancia = [[Singleton alloc] init];
+    }
+    return instancia;
+}
 
 +(NSArray *)palavrasDicionario;
 {

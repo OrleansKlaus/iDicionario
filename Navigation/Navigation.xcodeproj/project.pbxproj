@@ -44,7 +44,7 @@
 		9EE691971AB99E1D00BDFC8D /* I.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9EE6918C1AB99E1D00BDFC8D /* I.PNG */; };
 		9EE691981AB99E1D00BDFC8D /* J.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9EE6918D1AB99E1D00BDFC8D /* J.PNG */; };
 		9EE691991AB99E1D00BDFC8D /* K.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9EE6918E1AB99E1D00BDFC8D /* K.PNG */; };
-		9EE6919C1AB9A36A00BDFC8D /* Palavras.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE6919B1AB9A36A00BDFC8D /* Palavras.m */; };
+		9EE6919C1AB9A36A00BDFC8D /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE6919B1AB9A36A00BDFC8D /* Singleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,8 +100,8 @@
 		9EE6918C1AB99E1D00BDFC8D /* I.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = I.PNG; sourceTree = "<group>"; };
 		9EE6918D1AB99E1D00BDFC8D /* J.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = J.PNG; sourceTree = "<group>"; };
 		9EE6918E1AB99E1D00BDFC8D /* K.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = K.PNG; sourceTree = "<group>"; };
-		9EE6919A1AB9A36A00BDFC8D /* Palavras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Palavras.h; sourceTree = "<group>"; };
-		9EE6919B1AB9A36A00BDFC8D /* Palavras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Palavras.m; sourceTree = "<group>"; };
+		9EE6919A1AB9A36A00BDFC8D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		9EE6919B1AB9A36A00BDFC8D /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +168,8 @@
 				27156F5318B76AF50053A99C /* Supporting Files */,
 				27156F7B18BA89430053A99C /* LetraViewController.h */,
 				27156F7C18BA89430053A99C /* LetraViewController.m */,
-				9EE6919A1AB9A36A00BDFC8D /* Palavras.h */,
-				9EE6919B1AB9A36A00BDFC8D /* Palavras.m */,
+				9EE6919A1AB9A36A00BDFC8D /* Singleton.h */,
+				9EE6919B1AB9A36A00BDFC8D /* Singleton.m */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -357,7 +357,7 @@
 				27156F5D18B76AF50053A99C /* MackenzieAppDelegate.m in Sources */,
 				27156F7D18BA89430053A99C /* LetraViewController.m in Sources */,
 				27156F5918B76AF50053A99C /* main.m in Sources */,
-				9EE6919C1AB9A36A00BDFC8D /* Palavras.m in Sources */,
+				9EE6919C1AB9A36A00BDFC8D /* Singleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

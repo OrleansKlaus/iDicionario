@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Palavras : NSObject
+@interface Singleton : NSObject
 
 +(NSArray *) palavrasDicionario;
++(Singleton* ) instance;
 
 @end
