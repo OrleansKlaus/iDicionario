@@ -12,9 +12,9 @@
 @implementation LetraViewController
 {
     Singleton *singleton;
-    NSArray *palavrasDicionario;
+    NSMutableArray *palavrasDicionario;
 }
-@synthesize imageView, letraLabel, telaSucessora, telaPredecessora, tabBar;
+@synthesize imageView, letraLabel, telaSucessora, telaPredecessora, tabBar, toolBar, textoField, barButton, searchBar;
 
 int indiceTela;
 
@@ -65,7 +65,41 @@ int indiceTela;
 //    editBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(editWord)];
 //    tabBar.items = @[_editBarButton];
     [self.view addSubview:tabBar];
+    
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
 
+    
+    toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 20, screenRect.size.width, 44)];
+    [self.view addSubview:toolBar];
+
+    textoField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width - 80, 25)];
+    textoField.backgroundColor = [UIColor whiteColor];
+    textoField.layer.cornerRadius = 7;
+    textoField.layer.borderWidth = 1;
+    textoField.layer.borderColor = [UIColor grayColor].CGColor;
+    textoField.placeholder = @"Editar palavra...";
+
+    searchBar = [[UIBarButtonItem alloc] initWithCustomView:textoField];
+    searchBar.target = self;
+    searchBar.action = @selector(textFieldDidBeginEditing:);
+    barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(trocandoPalavra)];
+    barButton.tintColor = [UIColor grayColor];
+    toolBar.items = @[searchBar,barButton];
+
+}
+
+- (void)trocandoPalavra {
+    NSString *texto = textoField.text;
+    if ([texto isEqual: @""]) {
+        //word.text = [Singleton instancia.palavrasDicionario objectAtIndex:indiceTela];
+        [textoField endEditing:YES];
+        }
+    else {
+        [textoField endEditing:YES];
+        //[palavrasDicionario trocaPalavra:texto atIndex:indiceTela];
+        letraLabel.text = [palavrasDicionario objectAtIndex:indiceTela];
+        }
 }
 
 -(void)disparouTap:(UITapGestureRecognizer *)tap

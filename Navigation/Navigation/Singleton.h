@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import <Realm/Realm.h>
 
 @interface Singleton : NSObject
 
-+(NSArray *) palavrasDicionario;
+@property (nonatomic, strong) NSMutableArray *palavrasDicionario;
+@property (nonatomic, strong) NSMutableArray *alphabet;
+
+-(void)trocaPalavra:(NSString *)palavra atIndex:(NSInteger)index;
 +(Singleton* ) instance;
 
 @end

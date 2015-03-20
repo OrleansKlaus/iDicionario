@@ -20,6 +20,10 @@
 @property LetraViewController *telaSucessora;
 @property LetraViewController *telaPredecessora;
 @property UITabBar *tabBar;
+@property UITextField *textoField;
+@property UIBarButtonItem *barButton;
+@property UIBarButtonItem *searchBar;
+@property UIToolbar *toolBar;
 
 -(void)disparouTap:(UITapGestureRecognizer*)tap;
 -(void)disparouPan:(UIPanGestureRecognizer*)pan;

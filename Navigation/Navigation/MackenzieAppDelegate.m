@@ -8,6 +8,7 @@
 
 #import "MackenzieAppDelegate.h"
 #import "LetraViewController.h"
+#import "ProcuraTableViewController.h"
 
 @implementation MackenzieAppDelegate
 
@@ -16,15 +17,26 @@
     LetraViewController *viewController = [[LetraViewController alloc]
                                            initWithNibName:nil
                                            bundle:nil];
+    ProcuraTableViewController *tableview = [[ProcuraTableViewController alloc] init];
     
+//    self.navigationController = [[UINavigationController alloc]
+//                                 initWithRootViewController:viewController];
+//    self.window = [[UIWindow alloc]
+//                   initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window.rootViewController = self.navigationController;
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[viewController, tableview];
+    [[tabBarController.tabBar.items objectAtIndex:0] setTitle:@"Alfabeto"];
+    [[tabBarController.tabBar.items objectAtIndex:1] setTitle:@"Resumo"];
     
-    self.navigationController = [[UINavigationController alloc]
-                                 initWithRootViewController:viewController];
+    [[tabBarController.tabBar.items objectAtIndex:0] setImage:[UIImage imageNamed:@"align_right-25"]];
+    [[tabBarController.tabBar.items objectAtIndex:1] setImage:[UIImage imageNamed:@"alphabetical_sorting_az-25"]];
+
+    CGRect Framio = [[UIScreen mainScreen] bounds];
+
+// UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, Framio.size.width, 44)];
     self.window = [[UIWindow alloc]
-                   initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.navigationController;
-
-
+                   initWithFrame:Framio];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

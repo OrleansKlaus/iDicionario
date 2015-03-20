@@ -45,6 +45,8 @@
 		9EE691981AB99E1D00BDFC8D /* J.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9EE6918D1AB99E1D00BDFC8D /* J.PNG */; };
 		9EE691991AB99E1D00BDFC8D /* K.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9EE6918E1AB99E1D00BDFC8D /* K.PNG */; };
 		9EE6919C1AB9A36A00BDFC8D /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE6919B1AB9A36A00BDFC8D /* Singleton.m */; };
+		9EE691A01ABC747D00BDFC8D /* PalavraUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE6919F1ABC747D00BDFC8D /* PalavraUITableViewCell.m */; };
+		9EE691A31ABC74E600BDFC8D /* ProcuraTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE691A21ABC74E600BDFC8D /* ProcuraTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,10 @@
 		9EE6918E1AB99E1D00BDFC8D /* K.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = K.PNG; sourceTree = "<group>"; };
 		9EE6919A1AB9A36A00BDFC8D /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		9EE6919B1AB9A36A00BDFC8D /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		9EE6919E1ABC747D00BDFC8D /* PalavraUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PalavraUITableViewCell.h; sourceTree = "<group>"; };
+		9EE6919F1ABC747D00BDFC8D /* PalavraUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PalavraUITableViewCell.m; sourceTree = "<group>"; };
+		9EE691A11ABC74E600BDFC8D /* ProcuraTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcuraTableViewController.h; sourceTree = "<group>"; };
+		9EE691A21ABC74E600BDFC8D /* ProcuraTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcuraTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,10 @@
 				27156F5518B76AF50053A99C /* InfoPlist.strings */,
 				27156F5818B76AF50053A99C /* main.m */,
 				27156F5A18B76AF50053A99C /* Navigation-Prefix.pch */,
+				9EE6919E1ABC747D00BDFC8D /* PalavraUITableViewCell.h */,
+				9EE6919F1ABC747D00BDFC8D /* PalavraUITableViewCell.m */,
+				9EE691A11ABC74E600BDFC8D /* ProcuraTableViewController.h */,
+				9EE691A21ABC74E600BDFC8D /* ProcuraTableViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -355,8 +365,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				27156F5D18B76AF50053A99C /* MackenzieAppDelegate.m in Sources */,
+				9EE691A01ABC747D00BDFC8D /* PalavraUITableViewCell.m in Sources */,
 				27156F7D18BA89430053A99C /* LetraViewController.m in Sources */,
 				27156F5918B76AF50053A99C /* main.m in Sources */,
+				9EE691A31ABC74E600BDFC8D /* ProcuraTableViewController.m in Sources */,
 				9EE6919C1AB9A36A00BDFC8D /* Singleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
